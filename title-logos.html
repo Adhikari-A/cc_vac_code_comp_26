@@ -1,0 +1,26 @@
+<script>
+const titleSlide = document.querySelector("#title-slide");
+
+if (titleSlide && !titleSlide.querySelector(".title-logo-row")) {
+  titleSlide.insertAdjacentHTML("beforeend", `
+    <div class="title-logo-row">
+      <div class="title-logo-slot logo-centra">
+        <img src="logos/centra_30_logo_white.png" alt="CENTRA">
+      </div>
+
+      <div class="title-logo-slot logo-grit">
+        <img src="logos/logo_vertical_ET.png" alt="GRIT">
+      </div>
+
+
+      <div class="title-logo-slot logo-ist">
+        <img src="logos/IST_A_RGB_NEG.png" alt="IST">
+      </div>
+
+      <div class="title-logo-slot logo-fct">
+        <img src="logos/2022_FCT_Logo_B_horizontal_branco.png" alt="FCT">
+      </div>
+    </div>
+  `);
+}
+</script>

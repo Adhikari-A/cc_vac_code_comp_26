@@ -1,0 +1,254 @@
+// Include theme-specific fonts
+@import url('https://fonts.googleapis.com/css2?family=Abhaya+Libre&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;1,400&display=swap');
+
+// -----------------------------------------------
+
+/*-- scss:defaults --*/
+// Override theme settings (see ../template/settings.scss)
+// Base settings for all themes that can optionally be
+// overridden by the super-theme
+
+// Background of the presentation
+$backgroundColor: #fee0b5; // #fcfbf9;
+
+// Primary/body text
+$mainFont: 'Jost', Carlito, sans-serif;
+$mainFontSize: 35px;
+$mainColor: #333; // #051938
+
+// Vertical spacing between blocks of text
+$blockMargin: 20px;
+
+// Headings
+$headingMargin: 0 0 $blockMargin 0;
+$headingFont: 'Abhaya Libre', Impact, sans-serif;
+$headingColor: #1d76b9; //#006791;
+$headingLineHeight: 1.2;
+$headingLetterSpacing: normal;
+$headingTextTransform: none;
+$headingTextShadow: none;
+$headingFontWeight: normal;
+$heading1TextShadow: $headingTextShadow;
+
+$heading1Size: 2.75em;
+$heading2Size: 2.11em;
+$heading3Size: 1.55em;
+$heading4Size: 1.00em;
+
+$codeFont: monospace;
+
+// Links and actions
+$linkColor: #437597;
+$linkColorHover: darken( $linkColor, 20% );
+
+// Text selection
+$selectionBackgroundColor: #FF5E99;
+$selectionColor: #fff;
+
+// -----------------------------------------------
+/*-- scss:rules --*/
+
+/* Easy knobs for the title slide */
+$title-font: 'Abhaya Libre', serif;
+$info-font: 'Jost', sans-serif;
+
+$title-to-top-space: 80px;
+$title-to-author-space: 110px;
+$author-to-isntitute-space: 20px;
+$institute-to-collab-space: 130px;
+$collab-to-date-space: 55px;
+
+/* Whole title slide */
+#title-slide {
+  top: 0 !important;
+}
+
+/* Main title */
+#title-slide .title {
+  color: white !important;
+  font-family: $title-font !important;
+  line-height: 1.15;
+  margin-top: $title-to-top-space;
+  margin-bottom: $title-to-author-space;
+}
+
+/* Backticked code names inside the title */
+#title-slide .title code {
+  // color: #4f62c7 !important;
+  color: #00b6ff !important;
+  font-family: inherit !important;
+}
+
+/* Subtitle: Test */
+#title-slide .subtitle {
+  // color: white !important;
+  color: #08425f !important;
+  font-family: $info-font !important;
+  font-size: 1.25em !important;
+  margin-bottom: $author-to-isntitute-space;
+}
+
+/* Author block */
+#title-slide .quarto-title-authors {
+  margin-top: 0 !important;
+}
+
+#title-slide .quarto-title-author-name {
+  // color: white !important;
+  color: #46555f !important;
+  font-family: $info-font !important;
+  font-size: 0.75em !important;
+  margin-bottom: $institute-to-collab-space;
+}
+
+/* Collaboration line from institute: */
+#title-slide .quarto-title-affiliation {
+  color: white !important;
+  font-family: $info-font !important;
+  font-size: 0.80em !important;
+  // font-style: italic;
+  margin-top: 0 !important;
+  margin-bottom: $collab-to-date-space;
+}
+
+/* Date */
+#title-slide .date {
+  color: white !important;
+  font-family: $info-font !important;
+  font-size: 0.70em !important;
+  margin-top: 0 !important;
+}
+
+/* Logo row on title slide */
+#title-slide {
+  position: relative;
+}
+
+#title-slide .title-logo-row {
+  position: absolute;
+  left: 180px;
+  right: 180px;
+  bottom: -2cm;
+  height: 55px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+/* Common behavior for every logo box */
+#title-slide .title-logo-slot {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#title-slide .title-logo-slot img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+/* Individual logo boxes: width, height, padding, margin */
+#title-slide .logo-centra {
+  width: 5cm;
+  height: 5cm;
+  padding: 5px 10px 5px 10px;
+  margin: 0 0 0 0;
+}
+
+#title-slide .logo-grit {
+  width: 8cm;
+  height: 7cm;
+  padding: 1.5cm 10px 5px 10px;
+  margin: 0 0 0 0;
+}
+
+#title-slide .logo-ist {
+  width: 8cm;
+  height: 7cm;
+  padding: 1.5cm 10px 5px 10px;
+  margin: 0 0 0 0;
+}
+
+#title-slide .logo-fct {
+  width: 8cm;
+  height: 7cm;
+  padding: 1.5cm 10px 5px 10px;
+  margin: 0 0 0 0;
+}
+
+.reveal .slide-number {
+  font-size: 30px !important;
+  right: 14px !important;
+  bottom: 10px !important;
+}
+
+// -----------------------------------------------
+
+/* Section title knobs */
+$section-title-font: 'EB Garamond', Impact, sans-serif; //'Jost', sans-serif;
+$section-title-color: #1d76b9; // #333333;
+$section-title-size: 120px;
+$section-title-top-space: 350px;
+$section-title-left-space: 0px;
+$section-title-line-height: 1.05;
+
+/* Section title slides using manual columns */
+.reveal section.section-title-slide {
+  top: 0 !important;
+  height: 100%;
+}
+
+/* Hide the empty h2 produced by `##` */
+.reveal section.section-title-slide > h2 {
+  display: none;
+}
+
+/* Make the columns fill the slide height */
+.reveal section.section-title-slide .columns {
+  height: 100%;
+  margin: 0;
+}
+
+/* Make each column fill the slide height */
+.reveal section.section-title-slide .column {
+  height: 100%;
+}
+
+/* Actual visible title text */
+.reveal section.section-title-slide .section-title-text {
+  padding-top: $section-title-top-space;
+  padding-left: $section-title-left-space;
+  color: $section-title-color !important;
+  font-family: $section-title-font !important;
+  font-size: $section-title-size !important;
+  line-height: $section-title-line-height;
+  font-weight: normal;
+  text-align: left;
+}
+
+/* Remove paragraph margin inserted by Quarto */
+.reveal section.section-title-slide .section-title-text p {
+  margin: 0.5;
+}
+
+// -----------------------------------------------
+
+/* Normal content slides: force them back to the top */
+.reveal .slides > section.slide:not(#title-slide):not(.section-title-slide) {
+  top: 0 !important;
+  padding-top: 45px;
+  padding-left: 25px;
+  box-sizing: border-box;
+}
+
+/* First heading on normal slides */
+.reveal .slides > section.slide:not(#title-slide):not(.section-title-slide) > h2:first-child {
+  margin-top: 0;
+}
