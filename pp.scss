@@ -189,11 +189,15 @@ $collab-to-date-space: 55px;
   bottom: 10px !important;
 }
 
+.reveal:has(#title-slide.present) .slide-number {
+  display: none !important;
+}
+
 // -----------------------------------------------
 
 /* Section title knobs */
 $section-title-font: 'EB Garamond', Impact, sans-serif; //'Jost', sans-serif;
-$section-title-color: #1d76b9; // #333333;
+$section-title-color: #de4007; // #1d76b9; // #333333;
 $section-title-size: 120px;
 $section-title-top-space: 350px;
 $section-title-left-space: 0px;
@@ -243,7 +247,7 @@ $section-title-line-height: 1.05;
 /* Normal content slides: force them back to the top */
 .reveal .slides > section.slide:not(#title-slide):not(.section-title-slide) {
   top: 0 !important;
-  padding-top: 45px;
+  padding-top: 10px;
   padding-left: 25px;
   box-sizing: border-box;
 }
@@ -252,3 +256,85 @@ $section-title-line-height: 1.05;
 .reveal .slides > section.slide:not(#title-slide):not(.section-title-slide) > h2:first-child {
   margin-top: 0;
 }
+
+// -----------------------------------------------
+
+/* Spherical-symmetry scaling figure row */
+$fig-sph-row-width: 96%;
+$fig-sph-row-gap: 18px;
+$fig-sph-row-margin-top: 0px;
+$fig-sph-row-margin-bottom: 0px;
+
+$fig-sph-panel-width: 18%;
+$fig-sph-image-height: 200px;
+
+$fig-sph-title-font-size: 10px;
+$fig-sph-title-margin-top: 8px;
+$fig-sph-title-color: #333333;
+
+.reveal .fig-sph-scale {
+  width: $fig-sph-row-width;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  gap: $fig-sph-row-gap;
+  margin: $fig-sph-row-margin-top auto $fig-sph-row-margin-bottom auto;
+}
+
+.reveal .fig-sph-scale .fig-panel {
+  width: $fig-sph-panel-width;
+  text-align: center;
+}
+
+.reveal .fig-sph-scale .fig-panel img {
+  width: 100%;
+  height: $fig-sph-image-height;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto !important;
+  max-width: none !important;
+  max-height: none !important;
+}
+
+.reveal .fig-sph-scale .fig-title {
+  margin-top: $fig-sph-title-margin-top;
+  font-size: $fig-sph-title-font-size;
+  line-height: 1.1;
+  color: $fig-sph-title-color;
+  text-align: center;
+}
+
+// -----------------------------------------------
+
+/* Single figure between bullets */
+$single-sph-image-height: 200px;
+$single-sph-margin-top: -20px;
+$single-sph-margin-bottom: 0px;
+
+$single-sph-title-font-size: 10px;
+$single-sph-title-margin-bottom: 5px;
+$single-sph-title-color: #333333;
+
+.reveal img.single-sph-img {
+  height: $single-sph-image-height;
+  width: auto;
+  display: block;
+  margin: $single-sph-margin-top auto $single-sph-margin-bottom auto !important;
+  object-fit: contain;
+  max-width: 90%;
+  max-height: none !important;
+}
+
+.reveal .single-sph-title {
+  text-align: center;
+  font-size: $single-sph-title-font-size;
+  color: $single-sph-title-color;
+  line-height: 1.1;
+  margin-bottom: $single-sph-title-margin-bottom;
+}
+
+.reveal .single-sph-title p {
+  margin: 0;
+}
+

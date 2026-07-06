@@ -26,32 +26,37 @@ format:
       data-background-image: viz/cover.png
       data-background-size: cover
 include-after-body: title-logos.html
-editor: visual
+editor: source
 ---
-
-
 
 ##  {.section-title-slide background-image="viz/sec_t17.78_alt.png" background-size="contain" background-position="left"}
 
-::: columns
+:::::: columns
 ::: {.column width="50%"}
 :::
 
-::: {.column width="50%"}
-
-::: {.section-title-text}
+:::: {.column width="50%"}
+::: section-title-text
 General Picture
 :::
-
-:::
-:::
-
+::::
+::::::
 
 ## The "Golden Ball": Stories in spherical symmetry
 
 Tuning one-parameter $(p)$ families to the collapse threshold :
 
 - Universal power law scaling
-- Universal self similar solution
-- Arbitratily small black holes
 
+{{< include sph-scale-figs.html >}}
+
+- Universal self similar solution
+
+![](viz/MarCorRutAttHil2024u.png){.single-sph-img}
+
+::: {.single-sph-title}
+Marouda+ 2024
+:::
+
+
+- Arbitrarily small black holes: $M_{\mathrm{BH}} \propto (p-p_\star)^\gamma$
