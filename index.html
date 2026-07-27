@@ -9,7 +9,7 @@
 <link href="index_files/libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.9.38">
 
-  <meta name="author" content="CENTRA - Instituto Superior Técnico">
+  <meta name="author" content="CENTRA - Instituto Superior Técnico Critial Collapse Workshop, Lisboa">
   <meta name="dcterms.date" content="2026-07-13">
   <title>Axisymmetric vacuum critical collapse with the bamps, prague, and sphGR codes</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -33,7 +33,7 @@
       vertical-align: middle;
     }
   </style>
-  <link rel="stylesheet" href="index_files/libs/revealjs/dist/theme/quarto-e6edf026d60c0a8cfd266a8613fb1008.css">
+  <link rel="stylesheet" href="index_files/libs/revealjs/dist/theme/quarto-ea8acd363d9b34dd12fd69f410b2da73.css">
   <link href="index_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="index_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="index_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -137,10 +137,10 @@
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
 <div class="quarto-title-author-name">
-CENTRA - Instituto Superior Técnico 
+CENTRA - Instituto Superior Técnico<br><br><br><br><span style="color: #333;">Critial Collapse Workshop, Lisboa</span> 
 </div>
         <p class="quarto-title-affiliation">
-            In collaboration with: Thomas W. Baumgarte, Bernd Brügmann, Daniela Cors, David Hilditch, Anton Khirnov, and Tomáš Ledvinka
+            In collaboration with: Tomáš Ledvinka, Daniela Cors, Thomas W. Baumgarte, Anton Khirnov, Bernd Brügmann, and David Hilditch
           </p>
     </div>
 </div>
@@ -157,42 +157,44 @@ CENTRA - Instituto Superior Técnico
 <p>General Picture</p>
 </div>
 </div></div>
+<!-- ================================================================ -->
 </section>
 <section id="the-golden-ball-stories-in-spherical-symmetry" class="slide level2">
-<h2>The “Golden Ball”: Stories in spherical symmetry</h2>
-<p>Tuning one-parameter <span class="math inline">\((p)\)</span> families to the collapse threshold :</p>
+<h2>The “golden ball”: Stories in spherical symmetry</h2>
+<p>Tuning one-parameter <span class="math inline">\((p)\)</span> families to the collapse threshold <span class="math inline">\(p_\star\)</span>:</p>
 <ul>
-<li>Universal power law scaling</li>
+<li><p>Arbitrarily small black holes: <span class="math inline">\(M_{\mathrm{BH}} \propto (p-p_\star)^\gamma\)</span></p></li>
+<li><p>Universal power law scaling</p></li>
 </ul>
 <div class="fig-sph-scale">
 <div class="fig-panel">
 <img src="viz/GarDun1998.png" alt="">
 <div class="fig-title">
-Garfinkle+ 1998
-</div>
-</div>
-<div class="fig-panel">
-<img src="viz/ChohirLiePre2003.png" alt="">
-<div class="fig-title">
-Choptuik+ 2003
+Garfinkle <em>et al</em>. 1998
 </div>
 </div>
 <div class="fig-panel">
 <img src="viz/GunBauHil2019.png" alt="">
 <div class="fig-title">
-Gundlach+ 2019
+Gundlach <em>et al</em>. 2019
 </div>
 </div>
 <div class="fig-panel">
 <img src="viz/GunBauHil2024.png" alt="">
 <div class="fig-title">
-Gundlach+ 2024
+Gundlach <em>et al</em>. 2024
+</div>
+</div>
+<div class="fig-panel">
+<img src="viz/ChohirLiePre2003.png" alt="">
+<div class="fig-title">
+Choptuik <em>et al</em>. 2003
 </div>
 </div>
 <div class="fig-panel">
 <img src="viz/MarCorRutAttHil2024.png" alt="">
 <div class="fig-title">
-Marouda+ 2024
+Marouda <em>et al</em>. 2024
 </div>
 </div>
 </div>
@@ -201,10 +203,865 @@ Marouda+ 2024
 </ul>
 <p><img data-src="viz/MarCorRutAttHil2024u.png" class="single-sph-img"></p>
 <div class="single-sph-title">
-<p>Marouda+ 2024</p>
+<p>Marouda <em>et al</em>. 2024</p>
+</div>
+<!-- ================================================================ -->
+</section>
+<section id="the-not-so-golden-egg-away-from-spherical-sym." class="slide level2">
+<h2>The not-so-golden (?) egg: away from spherical sym.</h2>
+<ul>
+<li>Spherically symmetric scalar field</li>
+</ul>
+<div class="fig-sph-comp-scale">
+<div class="fig-panel">
+<img src="viz/GarDun1998.png" alt="">
+<div class="fig-title">
+Garfinkle <em>et al</em>. 1998
+</div>
+</div>
+<p><br></p>
+<div class="fig-panel">
+<img src="viz/GunBauHil2019.png" alt="">
+<div class="fig-title">
+Gundlach <em>et al</em>. 2019
+</div>
+</div>
+<div class="fig-panel">
+<img src="viz/GunBauHil2024.png" alt="">
+<div class="fig-title">
+Gundlach <em>et al</em>. 2024
+</div>
+</div>
+<!-- <div class="fig-panel">
+<img src="viz/ChohirLiePre2003.png" alt="">
+<div class="fig-title">Choptuik <em>et al</em>. 2003</div>
+</div>
+
+<div class="fig-panel">
+<img src="viz/MarCorRutAttHil2024.png" alt="">
+<div class="fig-title">Marouda <em>et al</em>. 2024</div>
+</div> -->
 </div>
 <ul>
-<li>Arbitrarily small black holes: <span class="math inline">\(M_{\mathrm{BH}} \propto (p-p_\star)^\gamma\)</span></li>
+<li>Axisymmetric vacuum</li>
+</ul>
+<div class="fig-axi-comp-scale">
+<div class="fig-panel">
+<img src="viz/AbrEvan1994.png" alt="">
+<div class="fig-title">
+Abrahams <em>et al</em>. 1993
+</div>
+</div>
+<!-- <div class="fig-panel">
+<img src="viz/HilWeyBrug2017.png" alt="">
+<div class="fig-title">Hilditch <em>et al</em>. 2017</div>
+</div> -->
+<div class="fig-panel">
+<img src="viz/LedKhi2022.png" alt="">
+<div class="fig-title">
+Ledvinka <em>et al</em>. 2022
+</div>
+</div>
+<div class="fig-panel">
+<img src="viz/FerRenAguBrugHil2022.png" alt="">
+<div class="fig-title">
+Fernández <em>et al</em>. 2022
+</div>
+</div>
+<div class="fig-panel">
+<img src="viz/BauGunHil2026.png" alt="">
+<div class="fig-title">
+Baumgarte <em>et al</em>. 2026
+</div>
+</div>
+</div>
+<!-- ================================================================ -->
+</section>
+<section id="section-1" class="slide level2">
+<h2>?</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<ul>
+<li>Are the different exponents numerical artefacts?</li>
+<li>Are they physical?</li>
+<li>How do we verify?</li>
+</ul>
+<p><span style="font-size: 1.35em; font-weight: bold;">Ultimately:</span></p>
+<p>What is the nature of spacetimes at the threshold of axisymmetric vacuum collapse?</p>
+</div><div class="column" style="width:50%;">
+<div style="padding-top: 200px; text-align: center;">
+<p><img src="viz/visible-confusion.png" style="height: 400px; width: auto; max-width: 100%; object-fit: contain;"></p>
+</div>
+</div></div>
+<!-- ================================================================ -->
+</section>
+<section id="section-2" class="slide level2 section-title-slide" data-background-image="viz/sec_t17.14.png" data-background-size="contain" data-background-position="right">
+<h2></h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="section-title-text">
+<p>Comparisons: Initial Steps</p>
+</div>
+<p>Baumgarte <em>et al</em>. Phys. Rev.&nbsp;Lett. 131, 181401 (2023) [<a href="https://arxiv.org/abs/2305.17171">arxiv:2305.17171</a>]</p>
+</div><div class="column" style="width:50%;">
+
+</div></div>
+<!-- ================================================================ -->
+</section>
+<section id="tools-in-our-box" class="slide level2">
+<h2>Tools in our box</h2>
+<div class="columns">
+<div class="column" style="width:33.33333333%;">
+<div style="text-align: center;">
+<code>bamps</code>
+</div>
+<ul>
+<li>Spectral methods</li>
+<li>Generalized Harmonic system</li>
+<li>Cartoon reduction of 3+1</li>
+<li>Domain split into subgrids</li>
+<li>Dynamic adaptive mesh refinement (AMR)</li>
+<li>MPI paralellized</li>
+</ul>
+</div><div class="column" style="width:33.33333333%;">
+<div style="text-align: center;">
+<code>prague</code>
+</div>
+<ul>
+<li>Finite difference</li>
+<li>BSSN</li>
+<li>Cartoon reduction of 3+1</li>
+<li>Box-in-box mesh</li>
+<li>Fixed refinement levels (FMR)</li>
+<li>Hybird parallelized</li>
+</ul>
+</div><div class="column" style="width:33.33333333%;">
+<div style="text-align: center;">
+<code>sphGR</code>
+</div>
+<ul>
+<li>Finite difference on spherical polar coordinates</li>
+<li>BSSN</li>
+<li>Cartoon reduction of 3+1</li>
+<li>Cell-cenetred grid with unit vector field decomposition</li>
+</ul>
+</div></div>
+<!-- ================================================================ -->
+</section>
+<section id="centered-brill-scaling" class="slide level2">
+<h2>Centered Brill scaling: <code>bamps</code>, <code>prague</code>, and <code>sphGR</code></h2>
+<p>Kretschmann scalar <span class="math inline">\(I = R_{abcd} R^{abcd}\)</span> scaling for centered <a href="#/brill-ansatz">twist-free Brill initial data</a> with <span class="math inline">\(A &gt; 0\)</span> and <span class="math inline">\(A &lt; 0\)</span>:</p>
+<div style="padding-top: 10px; text-align: center;">
+<p><img src="viz/centeredBrillScaling.png" style="height: 600px; width: auto; max-width: 100%; object-fit: contain;"></p>
+</div>
+<!-- ================================================================ -->
+</section>
+<section id="centered-brill-spacetime" class="slide level2">
+<h2>Centered Brill spacetimes: <code>bamps</code> and <code>prague</code></h2>
+<p>Centered <a href="#/brill-ansatz">twist-free Brill initial data</a> with <span class="math inline">\(A &gt; 0\)</span> and <span class="math inline">\(A &lt; 0\)</span>:</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div style="padding-top: 10px; text-align: center;">
+<p><code>bamps</code> <img src="viz/Fig_2c.png" style="height: 600px; width: auto; max-width: 100%; object-fit: contain;"></p>
+</div>
+</div><div class="column" style="width:50%;">
+<div style="padding-top: 10px; text-align: center;">
+<p><code>prague</code> <img src="viz/Fig_2d.png" style="height: 600px; width: auto; max-width: 100%; object-fit: contain;"></p>
+</div>
+</div></div>
+<!-- ================================================================ -->
+</section>
+<section id="initial-conclusions" class="slide level2">
+<h2>Initial conclusions</h2>
+<p>For the chosen two families of data:</p>
+<ul>
+<li>excellent agreement in scaling</li>
+<li>excellent agreement in the spacetime computed</li>
+</ul>
+<p><span style="font-size: 1.35em; font-weight: bold;">Need further investigation for more families!</span></p>
+<!-- ================================================================ -->
+</section>
+<section id="section-3" class="slide level2 section-title-slide" data-background-image="viz/sec_t16.8.png" data-background-size="contain" data-background-position="left">
+<h2></h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+
+</div><div class="column" style="width:50%;">
+<div class="section-title-text">
+<p>Comparisons: Beyond</p>
+</div>
+<p>Adhikari <em>et al</em>. 2026 [arxiv:2607.TOMORROW (submit/7817008 )]</p>
+</div></div>
+<!-- ================================================================ -->
+</section>
+<section id="new-scaling" class="slide level2">
+<h2>Scaling, again! (Last, I promise!!!)</h2>
+<p>Off-centered <a href="#/brill-ansatz">twist-free Brill initial data</a> with <span class="math inline">\(A &lt; 0\)</span> and <a href="#/ta-waves">time-asymmetric waves</a> with <span class="math inline">\(A\)</span> in the <a href="#/ta-waves-branch">upper branch</a>:</p>
+<div style="height: 10px;">
+
+</div>
+<div id="ff99d71b" class="cell" data-fig-height="5" data-fig-width="13" data-message="false" data-execution_count="1">
+<div class="cell-output cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="index_files/figure-revealjs/cell-2-output-1.png" class="quarto-figure quarto-figure-center" width="1507" height="610"></p>
+</figure>
+</div>
+</div>
+</div>
+<!-- ================================================================ -->
+</section>
+<section id="scaling-fits" class="slide level2">
+<h2>Scaling, again! (Last, I promise!!!)</h2>
+<p><a href="#/fit-results">Fits</a>:</p>
+<div style="height: 10px;">
+
+</div>
+<div id="4df21a80" class="cell" data-fig-height="5" data-fig-width="13" data-message="false" data-execution_count="2">
+<div class="cell-output cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="index_files/figure-revealjs/cell-3-output-1.png" class="quarto-figure quarto-figure-center" width="1507" height="610"></p>
+</figure>
+</div>
+</div>
+</div>
+<!-- ================================================================ -->
+</section>
+<section id="time-evolution" class="slide level2">
+<h2>Time evolution</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div style="margin-top: 50px; width: 100%;">
+<div id="dc63cd9f" class="cell" data-fig-height="5.8" data-fig-width="11" data-message="false" data-execution_count="3">
+<div class="cell-output cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="index_files/figure-revealjs/cell-4-output-1.png" class="quarto-figure quarto-figure-center" width="1125" height="649"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:50%;">
+<!-- <div style="margin-top: -130px; text-align: center;">
+  <img src="viz/kretsch_2D.png"
+       style="height: 900px; width: auto; max-width: 100%; object-fit: contain;">
+</div> -->
+<!-- Subcrirical                            Supercritical -->
+<div style="margin-top: -20px; text-align: center;">
+<p><video controls="" preload="metadata" style="height: 600px !important; width: auto; max-width: 100%; object-fit: contain; display: block; margin: 0 auto;"> <source src="viz/ta_teuk_kretsch_2D_crf40_gap10_own.webm" type="video/webm"> </video></p>
+</div>
+<div style="margin-top: 10px; text-align: center;">
+<p><img src="viz/kretsch_colorbar_horizontal.png" style="height: 70px; width: auto; max-width: 100%; object-fit: contain;"></p>
+</div>
+</div></div>
+<!-- ================================================================ -->
+</section>
+<section id="comparing-spacetimes-subcritical" class="slide level2">
+<h2>Comparing spacetimes : subcritical</h2>
+<p>Most tuned common subcritical: Left <span class="math inline">\(\rightarrow\)</span> <code>bamps</code>, Right <span class="math inline">\(\rightarrow\)</span> <code>prague</code></p>
+<div style="margin-top: -30px; text-align: center;">
+<p><img src="viz/kretsch_tau-z_lambda_compare_1.png" style="height: 700px; width: auto; max-width: 100%; object-fit: contain;"></p>
+</div>
+</section>
+<section id="comparing-spacetimes-subcritical-1" class="slide level2">
+<h2>Comparing spacetimes : subcritical</h2>
+<p>Most tuned common subcritical: Left <span class="math inline">\(\rightarrow\)</span> <code>bamps</code>, Right <span class="math inline">\(\rightarrow\)</span> <code>prague</code></p>
+<div style="margin-top: -30px; text-align: center;">
+<p><img src="viz/kretsch_tau-z_lambda_compare_2.png" style="height: 700px; width: auto; max-width: 100%; object-fit: contain;"></p>
+</div>
+<!-- ================================================================ -->
+</section>
+<section id="comparing-spacetimes-supercritical" class="slide level2">
+<h2>Comparing spacetimes : supercritical</h2>
+<div style="width:100%; font-size:0.75em;">
+<style>
+  .ah-table {
+    width: 100%;
+    border-collapse: collapse !important;
+    border-spacing: 0 !important;
+    text-align: center;
+    border: 1px solid #333333 !important;
+  }
+
+  .ah-table th,
+  .ah-table td {
+    border: 1px solid #333333 !important;
+    padding: 0.18em 0.28em;
+    vertical-align: middle;
+    white-space: nowrap;
+  }
+
+  .ah-table tr:last-child td {
+    border-bottom: 1px solid #333333 !important;
+  }
+
+  .overamp {
+    display: inline-block;
+    text-decoration-line: overline;
+    text-decoration-thickness: 1px;
+  }
+</style>
+<table class="ah-table">
+<tbody><tr>
+<th rowspan="2">
+<i>A</i>
+</th>
+<th colspan="3">
+bamps
+</th>
+<th colspan="3">
+prague
+</th>
+</tr>
+<tr>
+<th>
+<i>t</i>
+</th>
+<th>
+<i>M</i><sub>AH</sub>/<i>M</i><sub>ADM</sub>
+</th>
+<th>
+nature
+</th>
+<th>
+<i>t</i>
+</th>
+<th>
+<i>M</i><sub>AH</sub>/<i>M</i><sub>ADM</sub>
+</th>
+<th>
+nature
+</th>
+</tr>
+<tr>
+<td>
+<span class="overamp">1.25</span>
+</td>
+<td>
+3.93
+</td>
+<td>
+0.416
+</td>
+<td rowspan="6">
+single
+</td>
+<td>
+11.0
+</td>
+<td>
+0.544
+</td>
+<td rowspan="7">
+single
+</td>
+</tr>
+<tr>
+<td>
+<span class="overamp">1.3</span>
+</td>
+<td>
+12.5
+</td>
+<td>
+0.306<span class="math inline">\({}^\dagger\)</span>
+</td>
+<td>
+15.8
+</td>
+<td>
+0.335
+</td>
+</tr>
+<tr>
+<td>
+<span class="overamp">1.3005</span>
+</td>
+<td>
+13.6
+</td>
+<td>
+0.355
+</td>
+<td>
+16.5
+</td>
+<td>
+0.292
+</td>
+</tr>
+<tr>
+<td>
+<span class="overamp">1.3006</span>
+</td>
+<td>
+14.0
+</td>
+<td>
+0.292
+</td>
+<td>
+17.0
+</td>
+<td>
+0.285
+</td>
+</tr>
+<tr>
+<td>
+<span class="overamp">1.3007</span>
+</td>
+<td>
+14.8
+</td>
+<td>
+0.239
+</td>
+<td>
+17.8
+</td>
+<td>
+0.221
+</td>
+</tr>
+<tr>
+<td>
+<span class="overamp">1.30076</span>
+</td>
+<td>
+15.4
+</td>
+<td>
+0.212
+</td>
+<td>
+19.0
+</td>
+<td>
+0.222
+</td>
+</tr>
+<tr>
+<td>
+<span class="overamp">1.3008</span>
+</td>
+<td>
+16.5*
+</td>
+<td>
+0.0898
+</td>
+<td rowspan="6">
+bifurcated
+</td>
+<td>
+20.0
+</td>
+<td>
+0.139
+</td>
+</tr>
+<tr>
+<td>
+<span class="overamp">1.3008012</span>
+</td>
+<td>
+16.5*
+</td>
+<td>
+0.0749
+</td>
+<td>
+20.0
+</td>
+<td>
+0.0623
+</td>
+<td rowspan="4">
+bifurcated
+</td>
+</tr>
+<tr>
+<td>
+<span class="overamp">1.3008025</span>
+</td>
+<td>
+16.5*
+</td>
+<td>
+0.0534
+</td>
+<td>
+20.3
+</td>
+<td>
+0.0671
+</td>
+</tr>
+<tr>
+<td>
+<span class="overamp">1.300805</span>
+</td>
+<td>
+16.8
+</td>
+<td>
+0.0173
+</td>
+<td>
+20.3
+</td>
+<td>
+0.0647
+</td>
+</tr>
+<tr>
+<td>
+<span class="overamp">1.3008075</span>
+</td>
+<td>
+20.8
+</td>
+<td>
+0.0484
+</td>
+<td>
+17.5
+</td>
+<td>
+0.0234
+</td>
+</tr>
+<tr>
+<td>
+<span class="overamp">1.300807615</span>
+</td>
+<td>
+17.7
+</td>
+<td>
+0.0210
+</td>
+<td>
+—
+</td>
+<td>
+—
+</td>
+<td>
+—
+</td>
+</tr>
+</tbody></table>
+</div>
+<!-- ================================================================ -->
+</section>
+<section id="section-4" class="slide level2 section-title-slide" data-background-image="viz/sec_t17.7.png" data-background-size="contain" data-background-position="right">
+<h2></h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="section-title-text">
+<p>Moving forward: Challenges</p>
+</div>
+</div><div class="column" style="width:50%;">
+
+</div></div>
+<!-- ================================================================ -->
+</section>
+<section id="finding-horizons" class="slide level2">
+<h2>Finding horizons</h2>
+<p>Most tuned supercritical:</p>
+<div style="margin-top: -30px; text-align: center;">
+<p><img src="viz/ta_teuk_1.300807615b.bamps.horizon.png" style="height: 700px; width: auto; max-width: 100%; object-fit: contain;"></p>
+</div>
+<!-- ================================================================ -->
+</section>
+<section id="resolution" class="slide level2">
+<h2>Resolution:</h2>
+<p>Most tuned subcritical:</p>
+<div style="margin-top: -30px; text-align: center;">
+<p><img src="viz/kretsch_grid.png" style="height: 700px; width: auto; max-width: 100%; object-fit: contain;"></p>
+</div>
+</section>
+<section id="gaugecoordinate-failures" class="slide level2">
+<h2>Gauge/coordinate failures</h2>
+<p><span class="math display">\[
+\begin{aligned}
+\partial_t \alpha
+  &amp;= -\alpha^2 K
+  + \eta_L \log\left(\frac{\gamma^{p/2}}{\alpha}\right)
+  + \beta^i \partial_i \alpha, \\
+\partial_t \beta^i
+  &amp;= \alpha^2\,{}^{(3)}\Gamma^i
+  - \alpha \partial^i \alpha
+  - \eta_S \beta^i
+  + \beta^j \partial_j \beta^i .
+\end{aligned}
+\]</span></p>
+<div style="margin-top: 30px; width: 100%;">
+<div id="5735bdbd" class="cell" data-fig-height="5.8" data-fig-width="11" data-message="false" data-execution_count="4">
+<div class="cell-output cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="index_files/figure-revealjs/cell-5-output-1.png" class="quarto-figure quarto-figure-center" width="1787" height="556"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="take-away-points" class="slide level2">
+<h2>Take away points</h2>
+<ul>
+<li>Excellent agreement between <code>bamps</code>, <code>prague</code>, and <code>sphGR</code> codes</li>
+<li>Can tune up to <span class="math inline">\(\sim 1 \times 10^{-7}\)</span></li>
+<li>In this regime, axisymmetric vacuum collapse does not show universality</li>
+<li>Need to improve Gauge choices</li>
+<li>Need to tune further</li>
+<li>Need to study other families of initial data <!-- ================================================================ --></li>
+</ul>
+</section>
+<section id="section-5" class="slide level2 section-title-slide" data-background-image="viz/sec_t17.7.png" data-background-size="contain" data-background-position="left">
+<h2></h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+
+</div><div class="column" style="width:50%;">
+<div class="section-title-text">
+<p>Extra</p>
+</div>
+</div></div>
+<!-- ================================================================ -->
+</section>
+<section id="brill-ansatz" class="slide level2">
+<h2>Twist-free Brill ansatz</h2>
+<p>Conformal metric from</p>
+<p><span class="math display">\[
+\gamma_{ij} =  \psi^4 \tilde{\gamma}_{ij}
+\]</span></p>
+<p>follows ansatz with moment of time symmetry (<span class="math inline">\(K_{ij} = 0\)</span>): <span class="math display">\[
+\tilde{\gamma}_{ij}\mathrm{d}x^i\mathrm{d}x^j
+  =e^q(\mathrm{d}\rho^2+\mathrm{d}z^2)+\rho^2\text{d}\varphi^2
+\]</span></p>
+<p>where seed-function <span class="math inline">\(q\)</span> is given by</p>
+<p><span class="math display">\[
+q=A\rho^2e^{-[(\rho-\rho_0)^2/\sigma_\rho^2+(z-z_0)^2/\sigma_z^2]}.
+\]</span></p>
+<ul>
+<li><a href="#/centered-brill-scaling">Back to centered Brill scaling</a></li>
+<li><a href="#/centered-brill-spacetime">Back to centered Brill spacetimes</a></li>
+<li><a href="#/new-scaling">Back to new scaling</a></li>
+</ul>
+<!-- ================================================================ -->
+</section>
+<section id="ta-waves" class="slide level2">
+<h2>Time-asymmetric wave ansatz</h2>
+<div style="width:100%; font-size:0.5em;">
+<p>Ledvinka and Khirnov (2021)</p>
+</div>
+<p>Conformally flat metric: <span class="math inline">\(\gamma_{ij} = \delta_{ij}\)</span> in <span class="math inline">\(\gamma_{ij} =  \psi^4 \tilde{\gamma}_{ij}\)</span>.</p>
+<p>Non-rotating : <span class="math display">\[
+K^r_{~~\varphi} = K^\theta_{~~\varphi} = 0.
+\]</span></p>
+<p>Maximal: <span class="math display">\[
+K^\theta_{~~\theta} = - (K^r_{~~r} + K^\varphi_{~~\varphi}).
+\]</span></p>
+<p>Ansatz: <span class="math display">\[
+  K^r_{~~\theta} = \displaystyle - 60 \sqrt{\frac{2}{\pi}} A \left[ 3 \frac{r}{\sigma} - 2 \left( \frac{r}{\sigma} \right)^3 \right] \exp \left[ - \left( \frac{r}{\sigma} \right)^2  \right] \sin(2\theta).
+\]</span></p>
+<p>Then, solve for: <span class="math inline">\(K^r_{~~r}\)</span> and <span class="math inline">\(K^\varphi_{~~\varphi}\)</span>.</p>
+<ul>
+<li><a href="#/new-scaling">Back to new scaling</a></li>
+</ul>
+<!-- ================================================================ -->
+</section>
+<section id="ta-waves-branch" class="slide level2">
+<h2>Time-asymmetric wave ansatz</h2>
+<div style="width:100%; font-size:0.5em;">
+<p>Ledvinka and Khirnov (2021)</p>
+</div>
+<div style="margin-top: -30px; text-align: center;">
+<p><img src="viz/A_branch.png" style="height: 700px; width: auto; max-width: 100%; object-fit: contain;"></p>
+</div>
+<div style="margin-top: -30px;">
+<ul>
+<li><a href="#/new-scaling">Back to new scaling</a></li>
+</ul>
+</div>
+<!-- ================================================================ -->
+</section>
+<section id="fit-results" class="slide level2">
+<h2>Fitting results</h2>
+<div style="width:100%; font-size:0.75em;">
+<style>
+  .ah-table {
+    width: 100%;
+    border-collapse: collapse !important;
+    border-spacing: 0 !important;
+    text-align: center;
+    border: 1px solid #333333 !important;
+  }
+
+  .ah-table th,
+  .ah-table td {
+    border: 1px solid #333333 !important;
+    padding: 0.18em 0.28em;
+    vertical-align: middle;
+    white-space: nowrap;
+  }
+
+  .ah-table tr:last-child td {
+    border-bottom: 1px solid #333333 !important;
+  }
+
+  .overamp {
+    display: inline-block;
+    text-decoration-line: overline;
+    text-decoration-thickness: 1px;
+  }
+</style>
+<table class="ah-table">
+<tbody><tr>
+<th>
+<i>Data</i>
+</th>
+<th>
+<i>-log</i><sub>10</sub><i>(A</i><sub><span class="math inline">\(\star\)</span></sub>-A)
+</th>
+<th>
+fit type
+</th>
+<th>
+<i><span class="math inline">\(\gamma\)</span></i>
+</th>
+<th>
+<span class="math inline">\(\Delta\)</span>
+</th>
+</tr>
+<tr>
+<td rowspan="3">
+Brill (B)
+</td>
+<td>
+(all)
+</td>
+<td>
+linear
+</td>
+<td>
+<span class="math inline">\(0.22 \pm 0.01^*\)</span>
+</td>
+<td>
+–
+</td>
+</tr>
+<tr>
+<td>
+<span class="math inline">\(&gt;  2\)</span> (near)
+</td>
+<td>
+peaks
+</td>
+<td>
+–
+</td>
+<td>
+<span class="math inline">\(0.67 \pm 0.03^{~}\)</span>
+</td>
+</tr>
+<tr>
+<td>
+<span class="math inline">\(&gt;  2\)</span> (near)
+</td>
+<td>
+double
+</td>
+<td>
+<span class="math inline">\(0.23\pm 0.00^*\)</span>
+</td>
+<td>
+<span class="math inline">\(0.71 \pm 0.02^*\)</span>
+</td>
+</tr>
+<tr>
+<td rowspan="5">
+time-asymmetric (TA)
+</td>
+<td>
+(all)
+</td>
+<td>
+linear
+</td>
+<td>
+<span class="math inline">\(0.37 \pm 0.01^{~}\)</span>
+</td>
+<td>
+–
+</td>
+</tr>
+<tr>
+<td>
+<span class="math inline">\(&lt; 4.5\)</span> (far)
+</td>
+<td>
+linear
+</td>
+<td>
+<span class="math inline">\(0.26 \pm 0.01^*\)</span>
+</td>
+<td>
+–
+</td>
+</tr>
+<tr>
+<td>
+<span class="math inline">\(\geq 4.5\)</span> (near)
+</td>
+<td>
+linear
+</td>
+<td>
+<span class="math inline">\(0.51 \pm 0.02^{~}\)</span>
+</td>
+<td>
+–
+</td>
+</tr>
+<tr>
+<td>
+<span class="math inline">\(\geq 4.5\)</span> (near)
+</td>
+<td>
+peaks
+</td>
+<td>
+–
+</td>
+<td>
+<span class="math inline">\(^{~}1.1 \pm 0.04^{~}\)</span>
+</td>
+</tr>
+<tr>
+<td>
+<span class="math inline">\(\geq 4.5\)</span> (near)
+</td>
+<td>
+double
+</td>
+<td>
+<span class="math inline">\(0.51 \pm 0.01^*\)</span>
+</td>
+<td>
+<span class="math inline">\(1.32 \pm 0.06^*\)</span>
+</td>
+</tr>
+</tbody></table>
+</div>
+<ul>
+<li><a href="#/scaling-fits">Back to plot</a></li>
 </ul>
 
 </section>

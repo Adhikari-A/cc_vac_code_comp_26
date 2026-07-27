@@ -12,7 +12,7 @@
 // overridden by the super-theme
 
 // Background of the presentation
-$backgroundColor: #fee0b5; // #fcfbf9;
+$backgroundColor: #fbe6ca; //fee0b5 #fcfbf9;
 
 // Primary/body text
 $mainFont: 'Jost', Carlito, sans-serif;
@@ -45,7 +45,7 @@ $linkColor: #437597;
 $linkColorHover: darken( $linkColor, 20% );
 
 // Text selection
-$selectionBackgroundColor: #FF5E99;
+$selectionBackgroundColor: #033a64;
 $selectionColor: #fff;
 
 // -----------------------------------------------
@@ -55,10 +55,10 @@ $selectionColor: #fff;
 $title-font: 'Abhaya Libre', serif;
 $info-font: 'Jost', sans-serif;
 
-$title-to-top-space: 80px;
-$title-to-author-space: 110px;
+$title-to-top-space: -40px;
+$title-to-author-space: 160px;
 $author-to-isntitute-space: 20px;
-$institute-to-collab-space: 130px;
+$institute-to-collab-space: 80px;
 $collab-to-date-space: 55px;
 
 /* Whole title slide */
@@ -310,10 +310,10 @@ $fig-sph-title-color: #333333;
 /* Single figure between bullets */
 $single-sph-image-height: 200px;
 $single-sph-margin-top: -20px;
-$single-sph-margin-bottom: 0px;
+$single-sph-margin-bottom: -30px;
 
 $single-sph-title-font-size: 10px;
-$single-sph-title-margin-bottom: 5px;
+$single-sph-title-margin-bottom: -30px;
 $single-sph-title-color: #333333;
 
 .reveal img.single-sph-img {
@@ -336,5 +336,102 @@ $single-sph-title-color: #333333;
 
 .reveal .single-sph-title p {
   margin: 0;
+}
+
+// -----------------------------------------------
+
+/* Spherical-symmetry scaling figure row */
+$fig-sph-row-width-comp: 98%;
+$fig-sph-row-gap-comp: 18px;
+$fig-sph-row-margin-top-comp: 0px;
+$fig-sph-row-margin-bottom-comp: 0px;
+
+$fig-sph-panel-width-comp: 18%;
+$fig-sph-image-height-comp: 300px;
+
+$fig-sph-title-font-size-comp: 10px;
+$fig-sph-title-margin-top-comp: 8px;
+$fig-sph-title-color-comp: #333333;
+
+.reveal .fig-sph-comp-scale {
+  width: $fig-sph-row-width-comp;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  gap: $fig-sph-row-gap-comp;
+  margin: $fig-sph-row-margin-top-comp auto $fig-sph-row-margin-bottom-comp auto;
+}
+
+.reveal .fig-sph-comp-scale .fig-panel {
+  width: $fig-sph-panel-width-comp;
+  text-align: center;
+}
+
+.reveal .fig-sph-comp-scale .fig-panel img {
+  width: 100%;
+  height: $fig-sph-image-height-comp;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto !important;
+  max-width: none !important;
+  max-height: none !important;
+}
+
+.reveal .fig-sph-comp-scale .fig-title {
+  margin-top: $fig-sph-title-margin-top-comp;
+  font-size: $fig-sph-title-font-size-comp;
+  line-height: 1.1;
+  color: $fig-sph-title-color-comp;
+  text-align: center;
+}
+
+
+// -----------------------------------------------
+
+/* axi-symmetry scaling figure row */
+$fig-axi-row-width-comp: 98%;
+$fig-axi-row-gap-comp: 18px;
+$fig-axi-row-margin-top-comp: -50px;
+$fig-axi-row-margin-bottom-comp: 0px;
+
+$fig-axi-panel-width-comp: 18%;
+$fig-axi-image-height-comp: 300px;
+
+$fig-axi-title-font-size-comp: 10px;
+$fig-axi-title-margin-top-comp: -30px;
+$fig-axi-title-color-comp: #333333;
+
+.reveal .fig-axi-comp-scale {
+  width: $fig-axi-row-width-comp;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  gap: $fig-axi-row-gap-comp;
+  margin: $fig-axi-row-margin-top-comp auto $fig-axi-row-margin-bottom-comp auto;
+}
+
+.reveal .fig-axi-comp-scale .fig-panel {
+  width: $fig-axi-panel-width-comp;
+  text-align: center;
+}
+
+.reveal .fig-axi-comp-scale .fig-panel img {
+  width: 100%;
+  height: $fig-axi-image-height-comp;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto !important;
+  max-width: none !important;
+  max-height: none !important;
+}
+
+.reveal .fig-axi-comp-scale .fig-title {
+  margin-top: $fig-axi-title-margin-top-comp;
+  font-size: $fig-axi-title-font-size-comp;
+  line-height: 1.1;
+  color: $fig-axi-title-color-comp;
+  text-align: center;
 }
 
