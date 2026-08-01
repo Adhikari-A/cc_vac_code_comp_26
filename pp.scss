@@ -82,29 +82,29 @@ $collab-to-date-space: 55px;
   font-family: inherit !important;
 }
 
-/* Subtitle: Test */
+/* Subtitle block: in this case, the author name */
 #title-slide .subtitle {
   // color: white !important;
-  color: #08425f !important;
+  color: #002234 !important;
   font-family: $info-font !important;
   font-size: 1.25em !important;
   margin-bottom: $author-to-isntitute-space;
 }
 
-/* Author block */
+/* Author block: in this case, the institute */
 #title-slide .quarto-title-authors {
   margin-top: 0 !important;
 }
 
 #title-slide .quarto-title-author-name {
   // color: white !important;
-  color: #46555f !important;
+  color: #50606b !important;
   font-family: $info-font !important;
   font-size: 0.75em !important;
   margin-bottom: $institute-to-collab-space;
 }
 
-/* Collaboration line from institute: */
+/* Affiliation: Here, collaboration line */
 #title-slide .quarto-title-affiliation {
   color: white !important;
   font-family: $info-font !important;

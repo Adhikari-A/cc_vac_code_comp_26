@@ -23,7 +23,11 @@ format:
     menu: false
     progress: false
     title-slide-attributes:
-      data-background-image: viz/cover.png
+      #data-background-image: viz/cover.png
+      # title-slide-attributes:
+      data-background-video: viz/banner_plot_cropped_slow_crf30.webm
+      data-background-video-loop: "true"
+      data-background-video-muted: "true"
       data-background-size: cover
 include-after-body: logos/title-logos.html
 editor: source
