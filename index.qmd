@@ -154,8 +154,7 @@ Baumgarte <em>et al</em>. Phys. Rev. Lett. 131, 181401 (2023) [[arxiv:2305.17171
 <div style="text-align: center;">`sphGR`</div>
 - Finite difference on spherical polar coordinates
 - BSSN
-- Cartoon reduction of 3+1
-- Cell-cenetred grid with unit vector field decomposition
+- Cell-centered grid with unit vector field decomposition
 
 :::
 :::::::::
@@ -1117,7 +1116,8 @@ with plt.rc_context(params):
 <div style="margin-top: -20px; text-align: center;">
   <video controls preload="metadata"
          style="height: 600px !important; width: auto; max-width: 100%; object-fit: contain; display: block; margin: 0 auto;">
-    <source src="viz/ta_teuk_kretsch_2D_crf40_gap10_own.webm" type="video/webm">
+    <source src="viz/ta_teuk_sync_hstack_gap10_half_crf30_dwnsc2.webm" type="video/webm">
+    <!-- <source src="viz/ta_teuk_kretsch_2D_crf40_gap10_own.webm" type="video/webm"> -->
   </video>
 </div>
 
