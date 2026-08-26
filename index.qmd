@@ -221,7 +221,7 @@ For the chosen two families of data:
 ::: section-title-text
 Comparisons: Beyond
 :::
-Adhikari <em>et al</em>. [Phys. Rev. D (2026)](https://doi.org/10.1103/6k1y-v6pw) [[arxiv:2607.10843](https://arxiv.org/abs/2607.10843)]
+Adhikari <em>et al</em>. [Phys. Rev. D 114, 044095 (2026)](https://doi.org/10.1103/6k1y-v6pw) [[arxiv:2607.10843](https://arxiv.org/abs/2607.10843)]
 ::::
 ::::::
 
